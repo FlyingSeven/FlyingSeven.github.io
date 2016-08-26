@@ -84,19 +84,21 @@
 
 
 
-<meta name="description" content="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。
-What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and Hexo generates s">
+<meta name="description" content="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。部分网站链接可能需要翻墙才能看。
+What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于hexo搭建">
 <meta property="og:url" content="https://flyingseven.github.io/2016/08/25/关于hexo搭建/index.html">
 <meta property="og:site_name" content="Seven missing t">
-<meta property="og:description" content="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。
-What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and Hexo generates s">
-<meta property="og:updated_time" content="2016-08-26T07:05:48.000Z">
+<meta property="og:description" content="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。部分网站链接可能需要翻墙才能看。
+What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and">
+<meta property="og:image" content="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/Screen%20Shot%202016-08-26%20at%204.34.29%20PM.png?raw=true">
+<meta property="og:updated_time" content="2016-08-26T09:17:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于hexo搭建">
-<meta name="twitter:description" content="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。
-What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and Hexo generates s">
+<meta name="twitter:description" content="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。部分网站链接可能需要翻墙才能看。
+What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and">
+<meta name="twitter:image" content="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/Screen%20Shot%202016-08-26%20at%204.34.29%20PM.png?raw=true">
 
 
 
@@ -280,13 +282,18 @@ What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts
 
       
         <blockquote>
-<h2 id="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac-OS上进行。"><a href="#这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac-OS上进行。" class="headerlink" title="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。"></a>这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。</h2></blockquote>
+<h2 id="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac-OS上进行。部分网站链接可能需要翻墙才能看。"><a href="#这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac-OS上进行。部分网站链接可能需要翻墙才能看。" class="headerlink" title="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。部分网站链接可能需要翻墙才能看。"></a>这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。部分网站链接可能需要翻墙才能看。</h2></blockquote>
 <h3 id="What-is-Hexo"><a href="#What-is-Hexo" class="headerlink" title="What is Hexo?"></a>What is Hexo?</h3><p>Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and Hexo generates static files with a beautiful theme in seconds.</p>
 <h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><p>首先，安装Hexo之前必须要先确认安装以下  </p>
 <ul>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>  </li>
 <li><a href="https://git-scm.com" target="_blank" rel="external">Git</a>  </li>
 </ul>
+<p>测试Node.js是否安装</p>
+<pre><code>node -v
+</code></pre><p>测试git是否安装 </p>
+<pre><code>git version
+</code></pre><p>如果上述两个安装了的话，会显示出对应的安装版本，否则没有安装。</p>
 <h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>如果以上两个工具都已经安装了,直接使用npm安装Hexo</p>
 <pre><code>$ npm install -g hexo-cli 
 </code></pre><p>如果没有的话继续下面步骤  </p>
@@ -313,7 +320,36 @@ $ npm install
 └── themes
 </code></pre><h5 id="config-yml"><a href="#config-yml" class="headerlink" title="config.yml"></a>config.yml</h5><p>bolg站点设置文件，可以参考<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">configuration</a>文件进行比较多的设置</p>
 <h5 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h5><p>应用数据，Markdown编辑器被默认安装。</p>
-<h5 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h5>
+<h5 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h5><p><a href="https://hexo.io/docs/writing.html#Scaffolds" target="_blank" rel="external">Scaffold</a>文件，你创建的每个post操作所要生成的文件都是基于scaffold里的文件格式。</p>
+<h5 id="source"><a href="#source" class="headerlink" title="source"></a>source</h5><p>要post的源文件，用于存放网站的文章内容。hexo会忽略掉隐藏的文件和以下划线（’__’）开头的文件（除了_posts文件）。可识别的文件（如Markdown，HTML）将被处理并添加进<code>public</code>文件，其他的则只会被简单的复制。</p>
+<h5 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h5><p><a href="https://hexo.io/docs/themes.html" target="_blank" rel="external">Theme</a>为主题存放的文件。后面会以<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">nexT</a>为例子做一些简单的配置。</p>
+<h3 id="查看效果"><a href="#查看效果" class="headerlink" title="查看效果"></a>查看效果</h3><p>上面的都设置成功的话，现在可以先简单运行来看一下效果<br>1.生成静态文件  </p>
+<pre><code>hexo g
+</code></pre><p>2.设置本地服务器</p>
+<pre><code>hexo s
+</code></pre><p>然后会如下图所示  </p>
+<blockquote>
+<p><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/Screen%20Shot%202016-08-26%20at%204.34.29%20PM.png?raw=true" alt="run server img"></p>
+</blockquote>
+<p>然后点击本地的路径<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>就可以查看当前的初始化blog。</p>
+<h3 id="写一篇Blog"><a href="#写一篇Blog" class="headerlink" title="写一篇Blog"></a>写一篇Blog</h3><p>新建一篇文章，使用以下cmd </p>
+<pre><code>hexo new [layout] &lt;title&gt;
+</code></pre><p>_如果<strong>layout</strong>没有设置的话，hexo会使用在<strong>_config.yml</strong>里的<strong>default_layout</strong>格式，如果<strong>title</strong>字段里包含空格的话，需要加上引号_。</p>
+<p>然后根据layout的不同接下来会有不同的操作     </p>
+<h5 id="post"><a href="#post" class="headerlink" title="post:"></a>post:</h5><p>运行以下cmd</p>
+<pre><code>hexo g p
+</code></pre><p>或者</p>
+<pre><code>hexo p g
+</code></pre><p>两者效果是一样的，这时候开启下本地server</p>
+<pre><code>hexo s
+</code></pre><p>点击    <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>就可以查看新加的文章，当然可以在<code>source/_posts</code>目录下找到新建的对应.md文件进行编辑后再查看。</p>
+<h5 id="draft"><a href="#draft" class="headerlink" title="draft"></a>draft</h5><p>运行cmd</p>
+<pre><code>hexo publish [layout] &lt;filename&gt;
+</code></pre><p>然后hexo会将drafts移动到<code>source/_posts</code>文件下,接下来就跟post的一样了，运行 </p>
+<pre><code>hexo g d 
+</code></pre><p>或者</p>
+<pre><code>hexo d g
+</code></pre><h3 id="未完待续。。"><a href="#未完待续。。" class="headerlink" title="未完待续。。"></a>未完待续。。</h3>
       
     </div>
 
@@ -346,8 +382,8 @@ $ npm install
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/26/hahahhah/" rel="prev" title="hahahhah">
-                hahahhah <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/26/My-Gallery/" rel="prev" title="My Gallery">
+                My Gallery <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -416,7 +452,7 @@ $ npm install
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -448,7 +484,7 @@ $ npm install
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac-OS上进行。"><span class="nav-number">1.</span> <span class="nav-text">这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">What is Hexo?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements"><span class="nav-number">1.2.</span> <span class="nav-text">Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installation"><span class="nav-number">1.3.</span> <span class="nav-text">Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Git"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">安装Node.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SetUp"><span class="nav-number">1.4.</span> <span class="nav-text">SetUp</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#config-yml"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">config.yml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#package-json"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scaffolds"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">scaffolds</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac-OS上进行。部分网站链接可能需要翻墙才能看。"><span class="nav-number">1.</span> <span class="nav-text">这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。部分网站链接可能需要翻墙才能看。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">What is Hexo?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requirements"><span class="nav-number">1.2.</span> <span class="nav-text">Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installation"><span class="nav-number">1.3.</span> <span class="nav-text">Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Git"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">安装Node.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SetUp"><span class="nav-number">1.4.</span> <span class="nav-text">SetUp</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#config-yml"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">config.yml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#package-json"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scaffolds"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">scaffolds</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#source"><span class="nav-number">1.4.0.4.</span> <span class="nav-text">source</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#themes"><span class="nav-number">1.4.0.5.</span> <span class="nav-text">themes</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看效果"><span class="nav-number">1.5.</span> <span class="nav-text">查看效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写一篇Blog"><span class="nav-number">1.6.</span> <span class="nav-text">写一篇Blog</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#post"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">post:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#draft"><span class="nav-number">1.6.0.2.</span> <span class="nav-text">draft</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续。。"><span class="nav-number">1.7.</span> <span class="nav-text">未完待续。。</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
