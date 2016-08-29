@@ -377,24 +377,11 @@ $ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
          ssh-add ~/.ssh/id_rsa
 </code></pre><h5 id="将SSH-public-key-添加进Github"><a href="#将SSH-public-key-添加进Github" class="headerlink" title="将SSH public key 添加进Github"></a>将SSH public key 添加进Github</h5><ol>
 <li>将SSH public key 内容复制</li>
-<li><p>打开Github， 按以下步骤</p>
-<ol>
-<li><p>在网页的右上角，点击头像信息，然后点击<code>setting</code>选项</p>
-<pre><code>![1](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/1.png?raw=true)
-</code></pre></li>
-<li><p>在setting菜单中找到<code>SSH and GPG keys</code></p>
-<pre><code>![2](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/2.png?raw=true)
-</code></pre></li>
-<li><p>点击<code>New SSH key</code> 或者 <code>Add SSH key</code></p>
-<pre><code>![3](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/3.png?raw=true)
-</code></pre></li>
-<li><p>在<code>Title</code>这一栏写上该SSH的描述，把复制的key粘贴到<code>key</code>里面，然后点击按钮<code>Add SSH key</code></p>
-<pre><code>![4](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/4.png?raw=true)
-</code></pre></li>
-<li><p>然后根据提示输入Github密码，添加完成。</p>
-</li>
-</ol>
-</li>
+<li>打开Github，在网页的右上角，点击头像信息，然后点击<code>setting</code>选项<br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/1.png?raw=true" alt="1">       </li>
+<li>在setting菜单中找到<code>SSH and GPG keys</code><br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/2.png?raw=true" alt="2">       </li>
+<li>点击<code>New SSH key</code> 或者 <code>Add SSH key</code><br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/3.png?raw=true" alt="3"></li>
+<li>在<code>Title</code>这一栏写上该SSH的描述，把复制的key粘贴到<code>key</code>里面，然后点击按钮<code>Add SSH key</code><br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/4.png?raw=true" alt="4">       </li>
+<li>然后根据提示输入Github密码，添加完成。</li>
 </ol>
 <h5 id="Hexo配置Github服务器"><a href="#Hexo配置Github服务器" class="headerlink" title="Hexo配置Github服务器"></a>Hexo配置Github服务器</h5><p>打开本地的Hexo文件， 打开<code>_config.yml</code>找到<code>deploy</code> 然后如下配制</p>
 <pre><code>url: https://flyingseven.github.io/
