@@ -353,57 +353,77 @@ $ npm install
 </code></pre><p>或者</p>
 <pre><code>hexo d g
 </code></pre><h3 id="布置到Github"><a href="#布置到Github" class="headerlink" title="布置到Github"></a>布置到Github</h3><p>如果不想每次post文章到Github都要输入帐号信息，需要配置SSH(<em>SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。SSH 是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题</em>)。  </p>
-<ol>
-<li><p>检查是否已经有SSH文件</p>
-<pre><code>$ ls -al ~/.ssh
+<h5 id="检查是否已经有SSH文件"><a href="#检查是否已经有SSH文件" class="headerlink" title="检查是否已经有SSH文件"></a>检查是否已经有SSH文件</h5><pre><code>$ ls -al ~/.ssh
 # Lists the files in your .ssh directory, if they exist
-</code></pre><p> 如果有，直接到下面第5步   </p>
-</li>
-<li><p>生成新的SSH </p>
-<pre><code>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+</code></pre><p>如果有，直接到下面第5步   </p>
+<h5 id="生成新的SSH"><a href="#生成新的SSH" class="headerlink" title="生成新的SSH"></a>生成新的SSH</h5><pre><code>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
 # Creates a new ssh key, using the provided email as a label
- Generating public/private rsa key pair.  
-</code></pre><p> 当你被要求选择存储key的file时，有两种选择：</p>
+     Generating public/private rsa key pair.  
+</code></pre><p>当你被要求选择存储key的file时，有两种选择：</p>
 <pre><code>Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
 </code></pre><ul>
 <li>如果使用默认，点击enter键继续，但是如果已有了SSH keys , 那么原先的会被重写。</li>
 <li><p>如果不想修改原先的，然后添加一个新的，可以在这输入一个区别的名称，比如”id_rsa_blog”</p>
 <pre><code>$ cd ~/.ssh
 $ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
-Enter a file in which to save the key (/Users/you/.ssh/id_rsa): id_rsa_blog
+    Enter a file in which to save the key (/Users/you/.ssh/id_rsa): id_rsa_blog
 </code></pre></li>
 </ul>
-</li>
-<li><p>将SSH key 添加进 ssh-agent</p>
-<ol>
-<li><p>首先确定ssh-agent是否可用</p>
-<pre><code>eval &quot;$(ssh-agent -s)&quot;
-</code></pre></li>
-<li><p>添加SSH key到ssh-agent，这里把<code>id_rsa</code>替换为你摇添加的SSH key</p>
-<pre><code>ssh-add ~/.ssh/id_rsa
-</code></pre></li>
-</ol>
-</li>
-<li><p>将SSH public key 添加进Github</p>
-<ol>
+<h5 id="将SSH-key-添加进-ssh-agent"><a href="#将SSH-key-添加进-ssh-agent" class="headerlink" title="将SSH key 添加进 ssh-agent"></a>将SSH key 添加进 ssh-agent</h5><pre><code>1. 首先确定ssh-agent是否可用
+
+        eval &quot;$(ssh-agent -s)&quot;
+2. 添加SSH key到ssh-agent，这里把`id_rsa`替换为你摇添加的SSH key
+
+         ssh-add ~/.ssh/id_rsa
+</code></pre><h5 id="将SSH-public-key-添加进Github"><a href="#将SSH-public-key-添加进Github" class="headerlink" title="将SSH public key 添加进Github"></a>将SSH public key 添加进Github</h5><ol>
 <li>将SSH public key 内容复制</li>
 <li><p>打开Github， 按以下步骤</p>
 <ol>
-<li><p>在网页的右上角，点击头像信息，然后点击<code>setting</code>选项<br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/1.png?raw=true" alt="1"></p>
-</li>
-<li><p>在setting菜单中找到<code>SSH and GPG keys</code><br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/2.png?raw=true" alt="2"></p>
-</li>
-<li><p>点击<code>New SSH key</code> 或者 <code>Add SSH key</code><br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/3.png?raw=true" alt="3"></p>
-</li>
-<li><p>在<code>Title</code>这一栏写上该SSH的描述，把复制的key粘贴到<code>key</code>里面，然后点击按钮<code>Add SSH key</code><br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/4.png?raw=true" alt="4"></p>
-</li>
+<li><p>在网页的右上角，点击头像信息，然后点击<code>setting</code>选项</p>
+<pre><code>![1](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/1.png?raw=true)
+</code></pre></li>
+<li><p>在setting菜单中找到<code>SSH and GPG keys</code></p>
+<pre><code>![2](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/2.png?raw=true)
+</code></pre></li>
+<li><p>点击<code>New SSH key</code> 或者 <code>Add SSH key</code></p>
+<pre><code>![3](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/3.png?raw=true)
+</code></pre></li>
+<li><p>在<code>Title</code>这一栏写上该SSH的描述，把复制的key粘贴到<code>key</code>里面，然后点击按钮<code>Add SSH key</code></p>
+<pre><code>![4](https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/4.png?raw=true)
+</code></pre></li>
 <li><p>然后根据提示输入Github密码，添加完成。</p>
 </li>
 </ol>
 </li>
 </ol>
+<h5 id="Hexo配置Github服务器"><a href="#Hexo配置Github服务器" class="headerlink" title="Hexo配置Github服务器"></a>Hexo配置Github服务器</h5><p>打开本地的Hexo文件， 打开<code>_config.yml</code>找到<code>deploy</code> 然后如下配制</p>
+<pre><code>url: https://flyingseven.github.io/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+   deploy:
+      type: git
+      repo: git@github.com:FlyingSeven/FlyingSeven.github.io.git
+      branch: master
+      message: &apos;pull again&apos;
+</code></pre><p>  这里需要创建一个固定格式的repo,命名格式为userName.github.io.git<br>  原理可以查看<a href="https://pages.github.com" target="_blank" rel="external">GitHub Pages</a>.</p>
+<h5 id="将Hexo-内容推送到Github所创建的对应repo"><a href="#将Hexo-内容推送到Github所创建的对应repo" class="headerlink" title="将Hexo 内容推送到Github所创建的对应repo"></a>将Hexo 内容推送到Github所创建的对应repo</h5><p>此时步骤跟前面说的发送一样</p>
+<pre><code>cd /user/sf/HexoBlog
+hexo g
+hexo d
+</code></pre><p>然后成功后，把之前配置的url输入浏览器，就可以看到自己的博客了。</p>
+<h3 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h3><p>以<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">nexT</a>为例</p>
+<h5 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h5><pre><code>$ cd your-hexo-site
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><h5 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h5><p>打开Hexo文件，然后选择<code>_config.yml</code>,将<code>theme</code>改为<code>next</code></p>
+<p>其他配置，文档讲解很详细。</p>
+<h5 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h5><ul>
+<li><p>Permission denied (publickey)<br>这类问题如果之前配置好没有问题，再用时出现问题，需要:</p>
+<pre><code>ssh-add ~/.ssh/id_rsa
+</code></pre><p>该类问题尤其容易出在当时创建key时没有使用默认设置，然后ssh-agent 只是一个暂时的缓 存代理，所以重新开机后，需要手动添加。如果不是该情况，参考<a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">reason</a>。</p>
 </li>
-</ol>
+</ul>
 
           
         
