@@ -97,7 +97,7 @@ What is Hexo?Hexo is a fast, simple and powerful blog framework. You write posts
 <meta property="og:image" content="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/2.png?raw=true">
 <meta property="og:image" content="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/3.png?raw=true">
 <meta property="og:image" content="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/4.png?raw=true">
-<meta property="og:updated_time" content="2016-08-29T08:16:53.000Z">
+<meta property="og:updated_time" content="2016-08-29T08:24:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于hexo搭建">
 <meta name="twitter:description" content="这里主要记录下Hexo安装过程以及安装时遇到的问题，然后会有将Hexo部署到Github上的内容。所有操作在Mac OS上进行。部分网站链接可能需要翻墙才能看。
@@ -358,7 +358,7 @@ $ npm install
 </code></pre><h3 id="布置到Github"><a href="#布置到Github" class="headerlink" title="布置到Github"></a>布置到Github</h3><p>如果不想每次post文章到Github都要输入帐号信息，需要配置SSH(<em>SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。SSH 是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题</em>)。  </p>
 <h5 id="检查是否已经有SSH文件"><a href="#检查是否已经有SSH文件" class="headerlink" title="检查是否已经有SSH文件"></a>检查是否已经有SSH文件</h5><pre><code>$ ls -al ~/.ssh
 # Lists the files in your .ssh directory, if they exist
-</code></pre><p>如果有，直接到下面第5步   </p>
+</code></pre><p>如果有，直接到<a href="#jump">点击跳转</a>   </p>
 <h5 id="生成新的SSH"><a href="#生成新的SSH" class="headerlink" title="生成新的SSH"></a>生成新的SSH</h5><pre><code>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
 # Creates a new ssh key, using the provided email as a label
      Generating public/private rsa key pair.  
@@ -378,7 +378,7 @@ $ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
 2. 添加SSH key到ssh-agent，这里把`id_rsa`替换为你摇添加的SSH key
 
          ssh-add ~/.ssh/id_rsa
-</code></pre><h5 id="将SSH-public-key-添加进Github"><a href="#将SSH-public-key-添加进Github" class="headerlink" title="将SSH public key 添加进Github"></a>将SSH public key 添加进Github</h5><ol>
+</code></pre><h5 id="将SSH-public-key-添加进Github"><a href="#将SSH-public-key-添加进Github" class="headerlink" title="将SSH public key 添加进Github"></a><span id="jump">将SSH public key 添加进Github</span></h5><ol>
 <li>将SSH public key 内容复制</li>
 <li>打开Github，在网页的右上角，点击头像信息，然后点击<code>setting</code>选项<br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/1.png?raw=true" alt="1">       </li>
 <li>在setting菜单中找到<code>SSH and GPG keys</code><br><img src="https://github.com/FlyingSeven/ImageAssetRepo/blob/master/Hexo%20blog/FirstBlogImgs/2.png?raw=true" alt="2">       </li>
